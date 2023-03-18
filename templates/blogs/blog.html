@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="perfect">
+    <div class="intro">
+        <h2 class="topicoftopic">{{ current_blog.category }}</h2>
+        <h1 class="title">{{ current_blog.title }}</h1>
+        <h3>UPDATED - {{current_blog.upload_date}}</h3>
+        <img src="{{ current_blog.picture.url }}" class="main-img">
+    </div>
+    <div class="box">
+        <h2>{{current_blog.header}}</h2>
+        <div class="article">
+            <div class="par">{{ current_blog.article_paragraph_1 }}</div>
+            <button class="read-more">Read More</button>
+            <div class="continue-read">
+                <div class="par">{{ current_blog.article_paragraph_2 }}</div>
+                {% if current_blog.article_bible_verse_1 %}
+                <div class="par italic">{{ current_blog.article_bible_verse_1 }}
+                    <div class="passage">({{ current_blog.article_bible_verse_1_passage }})</div>
+                </div>
+                {% endif %}
+                <div class="par">{{ current_blog.article_paragraph_3 }}</div>
+                {% if current_blog.article_paragraph_4 %}
+                <div class="par">{{ current_blog.article_paragraph_4 }}</div>
+                {% endif %}
+                {% if current_blog.article_paragraph_5 %}
+                <div class="par">{{ current_blog.article_paragraph_5 }}</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
