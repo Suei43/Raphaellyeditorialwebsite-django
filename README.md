@@ -7,7 +7,7 @@ To view the website, install the required packages and run the Django server. Th
 <li><b>pip install -r requirements.txt</b></li>
 <li><b>python manage.py runserver</b></li>
 </ul>
-<p>Then, open the web browser and navigate to http://localhost:8000 to view the website.</p>
+<p>Then, open the web browser and navigate to <a href="http://localhost:8000">http://localhost:8000</a> to view the website.</p>
 
 <h2>Features</h2>
 <ul>
